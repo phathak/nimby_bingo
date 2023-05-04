@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/nimby_bingo/frontend/",
+  base: "/nimby_bingo/",
   plugins: [react()],
 });
