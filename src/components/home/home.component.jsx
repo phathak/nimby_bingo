@@ -22,7 +22,7 @@ const Home = () => {
     <div
       className="min-vh-100 align-items-center overlay-soft-dark"
       style={{
-        backgroundImage: `url(${IMAGES.image1})`,
+        // backgroundImage: `url(${IMAGES.image1})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -34,8 +34,8 @@ const Home = () => {
         <div>
           <h3 className="container">Score: {score}/25</h3>
         </div>
-        {/* <BingoCard /> */}
-        {/* <GenerateButton /> */}
+        <BingoCard />
+        <GenerateButton />
       </div>
     </div>
   );
