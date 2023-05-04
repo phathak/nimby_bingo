@@ -29,12 +29,12 @@ const Navbar = () => {
             <h1>Nimbyngo</h1>
           </a>
         </div>
-        <Dropdown
+        {/* <Dropdown
           options={subjects}
           value={subjects[0]}
           placeholder="Select an option"
           onChange={onChange}
-        />
+        /> */}
 
         <div className="col-md-3 text-end">
           {/* <button type="button" className="btn btn-light">
