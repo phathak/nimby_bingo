@@ -1,0 +1,12 @@
+.btn-generate {
+  margin: 20px;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 15px;
+}
+
+.btn-generate:hover {
+  background-color: #0c53be;
+}

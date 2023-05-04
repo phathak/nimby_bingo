@@ -1,0 +1,47 @@
+/* Style the button */
+/* label.button {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    background-color: #ccc;
+} */
+
+label.button {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  opacity: 80%;
+  color: black;
+  border-color: black;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the X overlay */
+label.button::after {
+  content: "X";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Show the X overlay when the checkbox is checked */
+input[type="checkbox"]:checked + label.button::after {
+  opacity: 1;
+}
