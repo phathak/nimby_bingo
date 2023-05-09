@@ -3,15 +3,17 @@ import { useContext, useState } from "react";
 import { SubjectContext } from "../../contexts/subject_context";
 import { getSubjectItems } from "../../data";
 import "./bingo-card.style.css";
+import {ScoreContext} from "../../contexts/score_context";
 
 function BingoCard() {
   const [selectedItems, setSelectedItems] = useState([]);
   const { currentSubject } = useContext(SubjectContext);
+  const { setCurrentScore } = useContext(ScoreContext);
 
   const items = getSubjectItems(currentSubject);
 
   const handleSelectItem = (item) => {
-    if (item.toLocaleLowerCase() === "nimby") {
+    if (item.toLocaleLowerCase() === "NIMBY") {
       return;
     }
 
@@ -24,6 +26,7 @@ function BingoCard() {
       newItems.splice(index, 1);
     }
     setSelectedItems(newItems);
+    setCurrentScore(newItems.length);
   };
 
   return (
@@ -34,8 +37,8 @@ function BingoCard() {
             key={index}
             item={item}
             index={index}
-            onSelectItem={() => {
-              handleSelectItem;
+            onSelectItem={(i) => {
+              handleSelectItem(i);
             }}
           />
         ))}

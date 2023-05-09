@@ -1,16 +1,25 @@
-import React, { useState } from "react";
 import exportAsImage from "../../utils/exportAsImage";
 import "./save-image-button.style.css";
 const GenerateButton = () => {
-  const [image, setImage] = useState();
-
   const takeScreenShot = () => {
-    const element = document.querySelector("#bingoCard");
-    exportAsImage(element, "test");
+    const scoreOnly = document.querySelector("#scoreOnly");
+    const titleScore = document.querySelector("#titleScore");
+    const saveButton = document.querySelector("#saveButton");
+
+    saveButton.style.display = 'none';
+    scoreOnly.style.display = 'none';
+    titleScore.style.display = 'block';
+
+    const element = document.querySelector("#bodyContainer");
+    exportAsImage(element, "nimbyngo");
+
+    saveButton.style.display = '';
+    scoreOnly.style.display = 'block';
+    titleScore.style.display = 'none';
   };
 
   return (
-    <button className=" btn-primary btn-generate" onClick={takeScreenShot}>
+    <button id="saveButton" className=" btn-primary btn-generate" onClick={takeScreenShot}>
       Save Image
     </button>
   );

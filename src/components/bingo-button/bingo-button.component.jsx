@@ -7,7 +7,6 @@ function BingoButton({ item, index, onSelectItem }) {
   const [isChecked, setChecked] = useState(false);
 
   const handleCheckboxChange = (event) => {
-    // console.log(event.target.id);
     if (event.target.id !== (12).toString()) {
       setChecked(event.target.checked);
     }
@@ -20,7 +19,7 @@ function BingoButton({ item, index, onSelectItem }) {
         checked={isChecked}
         onChange={(event) => {
           handleCheckboxChange(event);
-          item !== null && onSelectItem(item);
+          item !== "NIMBY" && onSelectItem(item);
         }}
         id={index?.toString()}
       />
