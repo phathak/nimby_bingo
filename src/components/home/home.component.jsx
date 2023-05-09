@@ -1,17 +1,11 @@
-import { useState, useEffect, useContext } from "react";
-import IMAGES from "../../images/images";
+import { useState } from "react";
 import BingoCard from "../bingo-card/bingo-card.component";
 import GenerateButton from "../save-image-button/save-image-button.component";
+import "./home.style.css";
 
-const Home = () => {
+const Home = (props) => {
+  const {backgroundImage} = props;
   const [score, setScore] = useState();
-
-  // const getRandomImage = () => {
-  //   const keys = Object.keys(images);
-  //   const randomIndex = Math.floor(Math.random() * keys.length);
-  //   return images[keys[randomIndex]];
-  // };
-  // const backgroundImage = getRandomImage();
 
   const calculateScore = (items) => {
     // const value = String.format("{0}/{1}", items.length, 25);
@@ -19,25 +13,29 @@ const Home = () => {
   };
 
   return (
-    <div
-      className="min-vh-100 align-items-center overlay-soft-dark"
-      style={{
-        // backgroundImage: `url(${IMAGES.image1})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      <div className="container text-center">
-        <div>
-          <h3 className="container">Score: {score}/25</h3>
+    <>
+      <div className="body">
+        <div
+          className="hero min-vh-100 align-items-center overlay-soft-dark"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+            marginTop: "-25px",
+          }}
+        >
+          <div className="container text-center">
+            <div>
+              {/*<h3 className="container">Score: {score}/25</h3>*/}
+            </div>
+            <BingoCard />
+            <GenerateButton />
+          </div>
         </div>
-        <BingoCard />
-        <GenerateButton />
       </div>
-    </div>
+    </>
   );
 };
 
