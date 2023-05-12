@@ -125,7 +125,7 @@ let subjects = [
   },
   {
     id: 3,
-    name: "3e lien (Annulé)",
+    name: "3e lien",
     items: [
       "",
       "",

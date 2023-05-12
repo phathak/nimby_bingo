@@ -1,9 +1,9 @@
-import BingoButton from "../bingo-button/bingo-button.component";
+import BingoButton from "./bingo-button";
 import { useContext, useState } from "react";
-import { SubjectContext } from "../../contexts/subject_context";
-import { getSubjectItems } from "../../data";
-import "./bingo-card.style.css";
-import {ScoreContext} from "../../contexts/score_context";
+import { SubjectContext } from "../contexts/subject";
+import { getSubjectItems } from "../data";
+import "../styles/bingo-card.style.css";
+import { ScoreContext } from "../contexts/score";
 
 function BingoCard() {
   const [selectedItems, setSelectedItems] = useState([]);

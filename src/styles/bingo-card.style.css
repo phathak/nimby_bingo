@@ -1,0 +1,17 @@
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(5, 150px);
+  gap: 5px;
+  margin: auto;
+  justify-content: center;
+  /*width: 100vw;*/
+}
+
+@media (min-width: 20em) {
+  .card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: repeat(5, 120px);
+  }
+}

@@ -1,8 +1,0 @@
-.card-grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 150px);
-  grid-template-rows: repeat(5, 150px);
-  gap: 5px;
-  margin: auto;
-  width: 800px;
-}

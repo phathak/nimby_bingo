@@ -1,10 +1,10 @@
 import { useState, useEffect, ChangeEvent, useContext } from "react";
 import Dropdown from "react-dropdown";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "react-dropdown/style.css";
-import { getSubjects } from "../../data";
-import "./navbar.style.css";
-import { SubjectContext } from "../../contexts/subject_context";
+import "../styles/navbar.style.css";
+import { getSubjects } from "../data";
+import { SubjectContext } from "../contexts/subject";
 
 const Navbar = () => {
   const [subjects, setSubjects] = useState([""]);
@@ -20,8 +20,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <header className="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div className="col-md-3 mb-2 mb-md-0">
+      <header className="container d-flex flex-wrap justify-content-md-between py-3 mb-4 border-bottom">
+        <div className="">
           <a
             href="/"
             className="d-inline-flex link-body-emphasis text-decoration-none"
@@ -37,9 +37,9 @@ const Navbar = () => {
         /> */}
 
         <div className="col-md-3 text-end">
-          {/* <button type="button" className="btn btn-light">
-            FR/EN
-          </button> */}
+          <Link className="btn btn-outline-dark" to="admin">
+            Login{" "}
+          </Link>
         </div>
       </header>
       <Outlet />

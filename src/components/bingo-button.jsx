@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./bingo-button.style.css";
-
+import "../styles/bingo-button.style.css";
 
 function BingoButton({ item, index, onSelectItem }) {
   const [isChecked, setChecked] = useState(false);
@@ -30,6 +29,9 @@ function BingoButton({ item, index, onSelectItem }) {
             ? "button btn btn-outline-primary"
             : "button btn btn-outline-dark"
         }
+        style={{
+          fontSize: item === "NIMBY" ? "24pt" : "12pt",
+        }}
       >
         {item}
       </label>

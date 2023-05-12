@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+
+.hero {
+    color:aliceblue;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(10,49,95);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -25px;
+}
