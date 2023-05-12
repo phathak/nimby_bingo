@@ -36,11 +36,11 @@ const Navbar = () => {
           onChange={onChange}
         /> */}
 
-        <div className="col-md-3 text-end">
+        {/* <div className="col-md-3 text-end">
           <Link className="btn btn-outline-dark" to="admin">
             Login{" "}
           </Link>
-        </div>
+        </div> */}
       </header>
       <Outlet />
     </div>
